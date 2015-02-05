@@ -1,6 +1,6 @@
-# Boilerplate theme [![](https://badge.fury.io/js/jsonresume-theme-boilerplate.png)](https://www.npmjs.org/package/jsonresume-theme-boilerplate)
+# JSON-resume simple theme 
 
-This is the boilerplate theme for [JSON Resume](http://jsonresume.org/).
+This is a simple responsive theme for [JSON Resume](http://jsonresume.org/).
 
 ## Getting started
 
@@ -32,7 +32,7 @@ sudo npm install -g resume-cli
 
 ### Download theme
 
-Lets go ahead and download a [copy of the repository](https://github.com/jsonresume/jsonresume-theme-boilerplate/archive/master.zip).
+Lets go ahead and download a [copy of the repository](https://github.com/bmullan91/jsonresume-theme-simple.git).
 
 ### Install npm packages
 
@@ -66,8 +66,6 @@ __The theme development can now begin.__
 ## Development
 
 ### Overview
-
-Now that you have your boilerplate theme installed, go through a quick overview of each of the files needed for your JSONResume theme:
 
 * `package.json`: Your package.json is required by all npm packages. Everytime you want to release a new update of your theme, you'll need to update it's version number.
 * `index.js`: This is the file that will return the needed HTML to the theme server. You can use it to process some things with your theme first, but we'll talk about that a bit later.
