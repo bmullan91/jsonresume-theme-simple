@@ -68,7 +68,7 @@ blockquote {
   font-size: 25px;
   line-height: 40px;
   color: rgba(0,0,0,0.88);
-  font-weight: 500;
+  font-weight: 400;
   margin: 4px 0 0 0;
 }
 
@@ -159,14 +159,12 @@ blockquote {
   .profile-pic {
     width: 150px;
     height: 150px;
-    margin-top: 25px;
+    margin-top: 23px; /* height of top - 1/2 height - border width  */
     background-size: 150px;
   }
 
   .name {
     font-size: 36px;
-    line-height: 40px;
-    font-weight: 500;
     margin: 10px 0 5px 0;
   }
 
@@ -216,12 +214,9 @@ blockquote {
 
 @media print {
 
-/*  .container {
-    width: 680px;
-  }*/
-
   .top {
     background-color: #FFF;
+    padding-top: 0;
   }
 
   .profile-pic {
@@ -233,7 +228,7 @@ blockquote {
   }
 
   .heading {
-    color: #FF4444;
+    color: #FF6363;
   }
 
   @page {

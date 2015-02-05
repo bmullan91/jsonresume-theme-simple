@@ -1,0 +1,604 @@
+<!doctype html>
+<html>
+	<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+  	<title>Brian Mullan</title>  	
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <style>
+  	body {
+  background: #fff;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.882353);
+  line-height: 20px;
+  margin: 0;
+}
+
+em {
+  color: #999;
+}
+
+p {
+  line-height: 1.4;
+}
+
+ul {
+  margin: 10px 0 20px 0;
+  padding-left: 20px;
+}
+
+blockquote {
+  margin: 0;
+  margin-bottom: 1em;
+}
+
+.item {
+  margin-bottom: 20px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 420px;
+  padding: 0 30px;
+}
+
+.top {
+  padding-top: 20px;
+  background-color: #EEE;
+  height: 40px;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.profile-pic {
+  float: left;
+  width: 80px;
+  height: 80px;
+  background-size: 80px;
+
+  -moz-border-radius: 50%; 
+  -webkit-border-radius: 50%; 
+  border-radius: 50%;
+  border-color: #FFF;
+  border-style: solid;
+  border-width: 4px;
+}
+
+.name-title {
+  float: left;
+  margin-left: 10px;
+}
+
+.name {
+  font-size: 25px;
+  line-height: 40px;
+  color: rgba(0,0,0,0.88);
+  font-weight: 400;
+  margin: 4px 0 0 0;
+}
+
+.job-title {
+  font-size: 17px;
+  color: rgba(0,0,0,0.6);
+}
+
+.bio {
+  margin: 20px 0;
+}
+
+.heading {
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 20px 0 10px 0;
+  color: #F05C5C;
+}
+
+.item .heading {
+  text-transform: none;
+  font-weight: 700;
+}
+
+.website {
+  font-weight: 300;
+}
+
+.profiles .website {
+  margin-left: 5px;
+}
+
+.label {
+  display: inline-block;
+  font-weight: 700;
+  line-height: 1.5em;
+}
+
+.contact .label {
+  width: 75px;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.summary {
+  margin: 15px 0 20px 0;
+}
+
+.highlights {
+  font-weight: 300;
+}
+
+.details {
+  padding-left: 10px;
+  border-left-style: solid;
+  border-left-width: 2px;
+  border-left-color: #999;
+}
+
+.skills .level {
+  font-size: 0.8em;
+  font-weight: 300;
+  color: #666;
+}
+
+.skills .item {
+  margin-bottom: 10px;
+}
+
+.skills ul {
+  margin-bottom: 10px;
+}
+
+.footer {
+  margin-top: 50px;
+  height: 1px;
+}
+
+/* Big Phones & Tablets */
+@media only screen and (min-width: 450px) {
+
+  .top {
+    height: 100px;
+  }
+
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    margin-top: 23px; /* height of top - 1/2 height - border width  */
+    background-size: 150px;
+  }
+
+  .name {
+    font-size: 36px;
+    margin: 10px 0 5px 0;
+  }
+
+  .name-title {
+    float: left;
+    margin: 50px 0 0 20px;
+  }
+
+}
+
+/* Desktop */
+@media print, screen and (min-width: 680px) {
+
+  .container {
+    max-width: 768px;
+  }
+
+  .contact, 
+  .profiles, 
+  .overview, 
+  .highlights, 
+  .education .item, 
+  .interests, 
+  .references {
+    width: 45%;
+  }
+
+  .profiles, .overview, .skills .item, .interests, .education .item:nth-child(even) {
+    float: left;
+  }
+
+  .contact, .highlights, .references, .education .item:nth-child(odd) {
+    float: right;
+  }
+
+  .skills .item {
+    width: 33.33333%;
+  }
+
+  .skills .item:nth-child(5n+5) { /*should be 3n+3, but not sure whats wrong with the selector?*/
+    clear: both;
+  }
+
+}
+
+/* Print overrides */
+
+@media print {
+
+  .top {
+    background-color: #FFF;
+    padding-top: 0;
+  }
+
+  .profile-pic {
+    display: none;
+  }
+
+  .name-title {
+    margin-left: 0;
+  }
+
+  .heading {
+    color: #FF6363;
+  }
+
+  @page {
+    margin: 2cm;
+  }
+
+}
+
+  	</style>
+	</head>
+	<body>
+    <div class="top">
+      <div class="container">
+        <div class="profile-pic" style="background-image: url(http://www.gravatar.com/avatar/818d6d5f28654c09ddec8c7763b1439a.png?s=200)"></div>
+        <div class="name-title">
+          <div class="name">Brian Mullan</div>
+          <div class="job-title">Front-End Engineer</div>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="container">
+
+        <div class="bio">A passionate developer, focused on improving the web. My processes and techniques are constantly evolving whilst working on open source projects, as well as keeping up to date with the latest trends and developments. I enjoy keeping fit and experimenting with new recipes as an avid cook.</div>
+
+      <div class="profiles">
+        <div class="heading">Profiles</div>
+          <div>
+            <span class="label fa fa-twitter"></span>
+              <span class="data">
+              <span class="website"><a href="https://twitter.com/bmullan91">https://twitter.com/bmullan91</a></span>
+            </span>
+          </div>
+          <div>
+            <span class="label fa fa-github"></span>
+              <span class="data">
+              <span class="website"><a href="https://github.com/bmullan91">https://github.com/bmullan91</a></span>
+            </span>
+          </div>
+          <div>
+            <span class="label fa fa-linkedin"></span>
+              <span class="data">
+              <span class="website"><a href="https://linkedin.com/in/bmullan91">https://linkedin.com/in/bmullan91</a></span>
+            </span>
+          </div>
+          <div>
+            <span class="label fa fa-instagram"></span>
+              <span class="data">
+              <span class="website"><a href="http://instagram.com/bmullan91/">http://instagram.com/bmullan91/</a></span>
+            </span>
+          </div>
+      </div>
+
+      <div class="contact">
+        <div class="heading">Contact</div>
+
+
+        <div><span class="label">Email</span><span class="data">bmullan91@gmail.com</span></div>
+
+        <div><span class="label">Phone</span><span class="data">07592332282</span></div>
+
+
+            <div><span class="label">Address</span><span class="data">16 Annadale Avenue</span></div>
+
+            <div><span class="label"></span><span class="data">Belfast</span></div>
+
+            <div><span class="label"></span><span class="data">BT7 3JH</span></div>
+      </div>
+
+      <div class="clearfix"></div>
+
+
+      <div id="work" class="">
+        <div class="heading">Experience</div>
+        <div class="item">
+          <div class="overview">
+
+            <div class="details">
+              <div class="label">
+                Pace
+                <span class="website"><a href="http://www.pace.com/global/">http://www.pace.com/global/</a></span>
+              </div>
+              <div class="date">
+                <span class="startDate">
+                  June 2012
+                </span>
+                <span class="endDate">
+                  - Present
+                </span>
+              </div>
+              <div class="position">
+                Graduate Software Engineer
+              </div>
+
+            </div>
+            <div class="summary">Working under several roles; placement, part-time and graduate engineer. I work primarily in JavaScript, developing set-top-box user interfaces as single page applications; circa 150k+ lines of code. Responsiveness of each user interface is critical, as the set-top-boxes are limited in processing power and memory. All possible steps are taken to optimise performance, such as; reducing DOM manipulations, reflows/repaints and blocking the event loop.</div>
+          </div>
+            <div class="highlights">
+            <span class="label">Highlights</span>
+              <ul>
+                <li>Object-Orientated JavaScript</li>
+                <li>Framework / library development</li>
+                <li>Modular design and development</li>
+                <li>Performance benchmarking and optimisations</li>
+                <li>Automated testing</li>
+                <li>Remote debugging</li>
+                <li>Linux enviroment</li>
+                <li>HTML templating and sementics</li>
+                <li>CSS/LESS</li>
+              </ul>
+            </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="item">
+          <div class="overview">
+
+            <div class="details">
+              <div class="label">
+                Club 137
+                <span class="website"><a href="http://club137.com/">http://club137.com/</a></span>
+              </div>
+              <div class="date">
+                <span class="startDate">
+                  September 2011
+                </span>
+                <span class="endDate">
+                  - September 2013
+                </span>
+              </div>
+              <div class="position">
+                Co-Founder
+              </div>
+
+            </div>
+            <div class="summary">A student club night; orignating from a house party held at 137 University Avenue. One of Belfasts most successful student nights.</div>
+          </div>
+            <div class="highlights">
+            <span class="label">Highlights</span>
+              <ul>
+                <li>Thirteen events, nine sell outs</li>
+                <li>Four locations</li>
+                <li>Host to BBC&#x27;s Radio-1 DJ, Danny Howard</li>
+                <li>Managing and hiring staff</li>
+                <li>Lighting and visual effects</li>
+              </ul>
+            </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="item">
+          <div class="overview">
+
+            <div class="details">
+              <div class="label">
+                SuperValu
+                <span class="website"><a href="http://www.supervalu.co.uk">http://www.supervalu.co.uk</a></span>
+              </div>
+              <div class="date">
+                <span class="startDate">
+                  May 2008
+                </span>
+                <span class="endDate">
+                  - June 2012
+                </span>
+              </div>
+              <div class="position">
+                Part-Time Butcher/Deli Counter
+              </div>
+
+            </div>
+            <div class="summary">Working on the shop counter where interacting with customers and developing a good rapport was key.</div>
+          </div>
+            <div class="highlights">
+            <span class="label">Highlights</span>
+              <ul>
+                <li>Working as a team</li>
+                <li>Training new staff memebers</li>
+                <li>Developed a strong work ethic</li>
+              </ul>
+            </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+
+      <div id="volunteer">
+        <div class="heading">Volunteer</div>
+        <div class="item">
+          <div class="overview">
+            <div class="details">
+              <div class="label">
+                CoderDojo
+                <span class="website"><a href="http://www.coderdojobelfast.com/">http://www.coderdojobelfast.com/</a></span>
+              </div>
+              <div class="date">
+                <span class="startDate">
+                  March 2013
+                </span>
+                <span class="endDate">
+                  - July 2013
+                </span>
+              </div>
+              <div class="position">
+                Mentor
+              </div>
+
+            </div>
+            <div class="summary">Global movement of free coding clubs for young people.</div>
+          </div>
+            <div class="highlights">
+            <span class="label">Highlights</span>
+              <ul>
+                <li>Teaching the basics of problem solving</li>
+                <li>Meeting the next generation of hackers</li>
+                <li>Fostering creativity and inquisitiveness</li>
+              </ul>
+            </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    
+      <div class="education" class="">
+        <div class="heading">Education</div>
+          <div class="item">
+            <div class="institution">
+              <span class="label">Queens University Belfast</span>
+                <span class="area">
+                   - Computer Science
+                </span>
+            </div>
+
+            <div class="studyType">
+              First Class Honours, including Professional Experience
+            </div>
+            <div class="date">
+              <span class="startDate">
+                September 2010
+              </span>
+              <span class="endDate">
+                - June 2014
+              </span>
+            </div>
+
+          </div>
+          <div class="item">
+            <div class="institution">
+              <span class="label">Loreto College Coleraine</span>
+                <span class="area">
+                   - Grammer School
+                </span>
+            </div>
+
+            <div class="studyType">
+              Three A Levels (ABB), and ten GCSEs (A* - C)
+            </div>
+            <div class="date">
+              <span class="startDate">
+                September 2003
+              </span>
+              <span class="endDate">
+                - June 2010
+              </span>
+            </div>
+
+          </div>
+      </div>
+      <div class="clearfix"></div>
+    
+      <div class="skills" class="">
+        <div class="heading">Skills</div>
+        <div class="item">
+          <div class="label">
+            JavaScript / Node.js
+            <span class="level">(Advance)</span>
+          </div>
+          <ul class="keywords">
+            <li>Module design and development</li>
+            <li>Testing and automation</li>
+            <li>Rest API&#x27;s</li>
+            <li>Browserify</li>
+            <li>Grunt / Gulp</li>
+            <li>PhantomJS</li>
+            <li>jQuery</li>
+          </ul>
+        </div>
+        <div class="item">
+          <div class="label">
+            Web Development
+            <span class="level">(Advance)</span>
+          </div>
+          <ul class="keywords">
+            <li>HTML(5)</li>
+            <li>CSS(3)</li>
+            <li>Responsive design</li>
+            <li>Single page applications</li>
+          </ul>
+        </div>
+        <div class="item">
+          <div class="label">
+            Version Control
+            <span class="level">(Advance)</span>
+          </div>
+          <ul class="keywords">
+            <li>Git</li>
+            <li>Subversion</li>
+          </ul>
+        </div>
+        <div class="item">
+          <div class="label">
+            MongoDB
+            <span class="level">(Intermediate)</span>
+          </div>
+          <ul class="keywords">
+            <li>Schema design</li>
+            <li>Mongoose (node ODM)</li>
+          </ul>
+        </div>
+        <div class="item">
+          <div class="label">
+            Java
+            <span class="level">(Intermediate)</span>
+          </div>
+          <ul class="keywords">
+            <li>Concurrency</li>
+            <li>Design Patterns</li>
+          </ul>
+        </div>
+        <div class="item">
+          <div class="label">
+            C#
+            <span class="level">(Intermediate)</span>
+          </div>
+          <ul class="keywords">
+            <li>WCF</li>
+            <li>SQL Server</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="interests" class="">
+        <div class="heading">Interests</div>
+        <div class="item">
+          <div class="label">
+            Open Source Projects
+          </div>
+          <ul class="keywords">
+            <li>unicalc.io</li>
+            <li>pragmatic-rest</li>
+            <li>express-subdomain</li>
+            <li>evt-listener</li>
+            <li>evt-emitter</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="references" class="">
+        <div class="heading">References</div>
+        <div class="item">
+           <div class="">Available on request.</div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="footer"></div>	
+	
+  </body>
+</html>
