@@ -2,6 +2,8 @@
 
 This is a simple responsive theme for [JSON Resume](http://jsonresume.org/).
 
+To view an example checkout [my resume!](http://bmullan91.github.io/cv/)
+
 ## Getting started
 
 To get started with theme development, this is what you'll need:
